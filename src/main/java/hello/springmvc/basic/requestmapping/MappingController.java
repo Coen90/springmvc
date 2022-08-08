@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class MappingController {
 
-    private Logger log = LoggerFactory.getLogger(getClass());
+    private Logger log = LoggerFactory.getLogger(getClass()); // getClass() 대신 MappingController.class 
 
     @RequestMapping(value = {"/hello-basic", "hello-gg"}, method = RequestMethod.GET) // 배열로 두개 등록 가능
     public String helloBasic() {
